@@ -108,4 +108,86 @@ So, in a subnet with 256 IPs, **only 251 are usable**.
 ✅ Launch **one EC2 instance in each subnet**
 
 ---
+# 📅 Day 4: Kubernetes — Auto Scaling
+
+### 🚀 What is Auto Scaling?
+
+Auto scaling is the ability of a system to automatically adjust the number of running resources (like pods, containers, or servers) based on the current workload or demand.
+It helps maintain performance while optimizing costs.
+
+---
+
+## 📈 Types of Scaling
+
+There are **two main types of scaling**:
+
+---
+
+### 1️⃣ Horizontal Scaling
+
+* Adds **more instances (pods/containers/servers)** based on demand.
+* When demand increases → more instances are added → **Scale Out**.
+* When demand decreases → instances are removed → **Scale In**.
+* Preferred in cloud-native environments like Kubernetes because it is more flexible and fault-tolerant.
+
+---
+
+### 2️⃣ Vertical Scaling
+
+* Increases the **resources (CPU, RAM, etc.) of the existing instance** rather than adding more instances.
+* When demand increases → the instance is replaced with a more powerful one → **Scale Up**.
+* When demand decreases → the instance is replaced with a smaller one → **Scale Down**.
+
+---
+
+### 🚫 Drawbacks of Vertical Scaling
+
+* Downtime is often required when replacing instances.
+* There are physical limits to how much you can scale a single machine.
+* Less fault-tolerant — if that instance fails, the service may be interrupted.
+
+---
+
+## 📋 AWS Auto Scaling Groups (ASGs)
+
+When using AWS Auto Scaling Groups, you define:
+
+* **Minimum number of servers**
+* **Maximum number of servers**
+* **Desired (default) number of servers**
+
+AWS automatically ensures the number of running instances stays within the defined limits based on demand and health checks.
+
+---
+
+## 📊 Factors That Determine Auto Scaling
+
+Several factors and metrics can trigger auto scaling, such as:
+
+* CPU Utilization
+* Memory Utilization
+* Network Traffic
+* Number of Requests
+* Custom Metrics (e.g., queue length, response time)
+
+These metrics are monitored continuously, and when thresholds are breached, scaling actions are performed.
+
+---
+
+## ⚡ Types of Scaling Strategies in Kubernetes
+
+### Dynamic Scaling
+
+* Kubernetes uses **Horizontal Pod Autoscaler (HPA)** to dynamically scale pods based on observed metrics (like CPU or memory usage).
+* You can also configure **Vertical Pod Autoscaler (VPA)** for vertically scaling pod resources automatically.
+
+---
+
+## 📌 Notes
+
+* Horizontal scaling is more commonly used in cloud-native applications because it offers better availability and reliability.
+* Vertical scaling is simpler but less flexible and has limitations.
+* Auto scaling helps save costs while maintaining optimal performance.
+
+---
 
