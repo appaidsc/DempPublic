@@ -191,3 +191,77 @@ These metrics are monitored continuously, and when thresholds are breached, scal
 
 ---
 
+# ⚖️ Load Balancer
+
+## What is a Load Balancer?
+A **Load Balancer** is a service or device that distributes incoming network traffic (requests) across multiple servers or instances.  
+It ensures that no single server is overwhelmed, and it improves application **availability, reliability, and performance**.
+
+---
+
+## 📝 Types of Load Balancer
+
+1️⃣ **CLB → Classic Load Balancer (Absolute)**
+- Legacy load balancer.
+- Works at Layer 4 & basic Layer 7.
+- Simple and easy to set up for basic applications.
+
+2️⃣ **ALB → Application Load Balancer**
+- Works at Layer 7 (Application Layer).
+- Supports advanced routing:
+  - Path-based
+  - Host-based
+  - Header-based
+- Best for modern web apps and microservices.
+
+3️⃣ **NLB → Network Load Balancer**
+- Works at Layer 4 (Transport Layer).
+- Ultra-low latency and high throughput.
+- Best for high-performance, real-time applications.
+
+4️⃣ **GLB → Gateway Load Balancer**
+- Works at Layer 3 & 4.
+- Useful for integrating with third-party virtual appliances (like firewalls, intrusion detection systems).
+- Enables transparent deployment of security appliances.
+
+---
+
+# ☸️ Kubernetes
+
+## What is Kubernetes?
+**Kubernetes** (often abbreviated as K8s) is an **open-source container orchestration platform** that automates the deployment, scaling, and management of containerized applications.
+
+Originally developed by **Google**, now maintained by the **Cloud Native Computing Foundation (CNCF)**.  
+Each cloud provider offers its own managed Kubernetes platform.
+
+---
+
+## 🔍 What Does Kubernetes Do?
+- Orchestrates and manages containers at scale.
+- Automatically handles:
+  - Deployment
+  - Scaling
+  - Networking
+  - Storage
+  - Failover
+- Ensures high availability and reliability of containerized applications.
+
+---
+
+## 📄 Types of Kubernetes Platforms
+- **On-Premises**: Install and manage it yourself on physical or virtual servers.
+- **Cloud-Managed Services**:
+  - AWS → EKS (Elastic Kubernetes Service)
+  - Azure → AKS (Azure Kubernetes Service)
+  - Google Cloud → GKE (Google Kubernetes Engine)
+- Lightweight options:
+  - Minikube (local testing)
+  - MicroK8s (lightweight Kubernetes for development)
+
+---
+
+## 🐳 Docker & Kubernetes Workflow
+```text
+docker → create image → push to Docker Hub/ECR → deploy on Kubernetes cluster
+
+
