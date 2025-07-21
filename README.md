@@ -264,4 +264,97 @@ Each cloud provider offers its own managed Kubernetes platform.
 ```text
 docker → create image → push to Docker Hub/ECR → deploy on Kubernetes cluster
 
+---
+# 📅 Day 6: Containers Orchestration & CloudFormation
+
+---
+
+## 🚀 Containers Orchestration
+
+Container orchestration is the process of automating the deployment, scaling, and management of containerized applications.  
+It ensures containers run reliably even in dynamic environments.
+
+---
+
+### 📦 What is a Container?
+A container is a lightweight, standalone, executable package that includes everything needed to run an application — code, runtime, system tools, and libraries.
+
+---
+
+### 🔷 Key Features of Container Orchestration
+
+1️⃣ **Automation of Deployment**
+- Example workflow:
+  - Provision EC2 instance
+  - Install Docker
+  - Pull the image from a registry
+  - Build & run the container
+- Orchestrators automate this entire process.
+
+2️⃣ **Auto Scaling**
+- Automatically adds or removes containers based on workload.
+
+3️⃣ **Load Balancing**
+- Distributes traffic evenly across multiple containers to ensure availability and reliability.
+
+4️⃣ **Self-Healing**
+- Automatically restarts failed containers and reschedules them on healthy nodes.
+
+Popular orchestration tools:  
+- Kubernetes
+- Docker Swarm
+- AWS ECS/EKS
+
+---
+
+## ☁️ CloudFormation & Infrastructure as Code
+
+When managing cloud infrastructure at scale, manual setup becomes impractical and error-prone.  
+This is where **Infrastructure as Code (IaC)** comes in — it allows you to define and provision infrastructure using configuration files.
+
+---
+
+### 🔷 Terraform & CloudFormation
+
+- **Terraform** and **CloudFormation** are popular IaC tools.
+- Terraform is open-source & cloud-agnostic.
+- AWS **CloudFormation** is specific to AWS.
+
+---
+
+### 📄 AWS CloudFormation
+
+CloudFormation helps you set up AWS resources automatically by defining them in a template file.
+
+---
+
+### 📝 Key Concepts
+
+- **Template**
+  - A blueprint describing the AWS resources you want to create.
+  - Formats:  
+    - JSON  
+    - YAML (**preferred for readability**)
+
+- **Stack**
+  - A running instance of a CloudFormation template.
+  - Represents a collection of AWS resources that you can manage as a single unit.
+
+- **Rollback**
+  - If a stack creation or update fails, CloudFormation can automatically revert to the previous stable state.
+
+---
+
+### 🌟 Why Use CloudFormation or Terraform?
+
+- You can create **multiple EC2 instances in multiple AWS accounts** without manual intervention.
+- Ensures consistency, repeatability, and faster deployment of infrastructure.
+- Supports version control for infrastructure.
+
+---
+
+
+
+
+
 
