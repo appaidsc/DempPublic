@@ -261,7 +261,7 @@ Each cloud provider offers its own managed Kubernetes platform.
 ---
 
 ## 🐳 Docker & Kubernetes Workflow
-```text
+
 docker → create image → push to Docker Hub/ECR → deploy on Kubernetes cluster
 
 ---
